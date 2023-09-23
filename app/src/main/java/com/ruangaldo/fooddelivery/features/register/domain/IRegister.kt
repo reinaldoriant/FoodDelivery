@@ -9,5 +9,5 @@ import kotlinx.coroutines.flow.Flow
  */
 
 interface IRegister {
-    fun get(request: RegisterRequestEntity): Flow<ViewResource<RegisterEntity>>
+    fun post(request: RegisterRequestEntity): Flow<ViewResource<RegisterEntity>>
 }

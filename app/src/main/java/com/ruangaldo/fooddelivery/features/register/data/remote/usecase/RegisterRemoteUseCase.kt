@@ -22,7 +22,7 @@ import kotlinx.coroutines.flow.flow
 
 class RegisterRemoteUseCase constructor(private val repository: IRegisterRemoteRepository) :
     IRegister {
-    override fun get(request: RegisterRequestEntity):
+    override fun post(request: RegisterRequestEntity):
         Flow<ViewResource<RegisterEntity>> = flow {
         repository.post(request.toRegisterRemoteRequest()).collect { result ->
             when (result) {
