@@ -1,7 +1,7 @@
 package com.ruangaldo.fooddelivery.features.register.data.remote.service
 
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteResponse
 import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
+import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteResponse
 import retrofit2.http.Body
 import retrofit2.http.POST
 
@@ -11,7 +11,7 @@ import retrofit2.http.POST
  */
 
 interface RegisterRemoteService {
-    @POST("data/top/totaltoptiervolfull")
+    @POST("api/register")
     suspend fun post(
         @Body request: RegisterRemoteRequest
     ): RegisterRemoteResponse
