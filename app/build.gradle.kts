@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.ruangaldo.fooddelivery"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.ruangaldo.fooddelivery"
