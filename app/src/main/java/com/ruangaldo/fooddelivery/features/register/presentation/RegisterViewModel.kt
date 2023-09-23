@@ -19,19 +19,19 @@ class RegisterViewModel constructor(private val register: IRegister) : ViewModel
     val registerUi: LiveData<ViewResource<RegisterEntity>> get() = _registerUi
     private val _registerUi = MutableLiveData<ViewResource<RegisterEntity>>()
 
-    fun a() {
+    fun post() {
         viewModelScope.launch {
             register.post(
                 RegisterRequestEntity(
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                ),
+                    "Coba12",
+                    "coba12@mail.com",
+                    "12345678",
+                    "12345678",
+                    "jl.dongi",
+                    "sura",
+                    "nyoman",
+                    "tukang"
+                )
             ).collect {
                 _registerUi.value = it
             }
