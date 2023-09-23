@@ -1,11 +1,11 @@
 package com.ruangaldo.fooddelivery.features.register.data.remote.repository
 
+import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
 import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteResponse
+import com.ruangaldo.fooddelivery.features.register.data.remote.service.RegisterRemoteService
 import com.ruangaldo.fooddelivery.shared.data.ConnectivityException
 import com.ruangaldo.fooddelivery.shared.data.DataResource
 import com.ruangaldo.fooddelivery.shared.data.InvalidDataException
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
-import com.ruangaldo.fooddelivery.features.register.data.remote.service.RegisterRemoteService
 import java.io.IOException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -23,7 +23,10 @@ class RegisterRemoteRepository constructor(private val service: RegisterRemoteSe
     override fun post(request: RegisterRemoteRequest):
         Flow<DataResource<RegisterRemoteResponse>> = flow {
         try {
-            emit(DataResource.Success(service.post(request)))
+            val result = service.post(request)
+            result.data?.let {
+                emit(DataResource.Success(result))
+            } ?: emit(DataResource.Error(throwable = InvalidDataException()))
         } catch (throwable: Throwable) {
             if (throwable is IOException) {
                 emit(DataResource.Error(throwable = ConnectivityException()))
