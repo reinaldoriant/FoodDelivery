@@ -6,9 +6,11 @@ import com.ruangaldo.fooddelivery.features.login.data.remote.toLoginRemoteReques
 import com.ruangaldo.fooddelivery.features.login.domain.ILogin
 import com.ruangaldo.fooddelivery.features.login.domain.LoginEntity
 import com.ruangaldo.fooddelivery.features.login.domain.LoginRequestEntity
+import com.ruangaldo.fooddelivery.shared.data.AuthorizedException
 import com.ruangaldo.fooddelivery.shared.data.ConnectivityException
 import com.ruangaldo.fooddelivery.shared.data.DataResource
 import com.ruangaldo.fooddelivery.shared.data.InvalidDataException
+import com.ruangaldo.fooddelivery.shared.domain.Authorized
 import com.ruangaldo.fooddelivery.shared.domain.Connectivity
 import com.ruangaldo.fooddelivery.shared.domain.InvalidData
 import com.ruangaldo.fooddelivery.shared.domain.ViewResource
@@ -39,6 +41,10 @@ class LoginRemoteUseCase constructor(private val repository: ILoginRemoteReposit
 
                         is InvalidDataException -> {
                             emit(ViewResource.Error(throwable = InvalidData()))
+                        }
+
+                        is AuthorizedException -> {
+                            emit(ViewResource.Error(throwable = Authorized()))
                         }
                     }
                 }

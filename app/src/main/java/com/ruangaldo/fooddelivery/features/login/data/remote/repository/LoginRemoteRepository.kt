@@ -3,6 +3,7 @@ package com.ruangaldo.fooddelivery.features.login.data.remote.repository
 import com.ruangaldo.fooddelivery.features.login.data.remote.model.LoginRemoteRequest
 import com.ruangaldo.fooddelivery.features.login.data.remote.model.LoginRemoteResponse
 import com.ruangaldo.fooddelivery.features.login.data.remote.service.LoginRemoteService
+import com.ruangaldo.fooddelivery.shared.data.AuthorizedException
 import com.ruangaldo.fooddelivery.shared.data.ConnectivityException
 import com.ruangaldo.fooddelivery.shared.data.DataResource
 import com.ruangaldo.fooddelivery.shared.data.InvalidDataException
@@ -28,19 +29,27 @@ class LoginRemoteRepository constructor(private val service: LoginRemoteService)
                 emit(DataResource.Success(result))
             } ?: emit(DataResource.Error(throwable = InvalidDataException()))
         } catch (throwable: Throwable) {
-            if (throwable is IOException) {
-                emit(DataResource.Error(throwable = ConnectivityException()))
-            }
+            when (throwable) {
+                is IOException -> {
+                    emit(DataResource.Error(throwable = ConnectivityException()))
+                }
 
-            if (throwable is HttpException) {
-                emit(
-                    DataResource.Error(
-                        code = throwable.code(),
-                        throwable = InvalidDataException()
+                is HttpException -> {
+                    emit(
+                        DataResource.Error(
+                            throwable = if (throwable.code() == 500) {
+                                AuthorizedException()
+                            } else {
+                                InvalidDataException()
+                            }
+                        )
                     )
-                )
+                }
+
+                else -> {
+                    emit(DataResource.Error(throwable = InvalidDataException()))
+                }
             }
-            emit(DataResource.Error(throwable = InvalidDataException()))
         }
     }.flowOn(Dispatchers.IO)
 }
