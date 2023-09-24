@@ -1,5 +1,6 @@
-package com.ruangaldo.fooddelivery.features.register.data.remote.model
+package com.ruangaldo.fooddelivery.features.login.data.remote.model
 
+import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterData
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
