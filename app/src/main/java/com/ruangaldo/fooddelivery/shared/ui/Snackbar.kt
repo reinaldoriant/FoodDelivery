@@ -7,6 +7,7 @@ import com.google.android.material.behavior.SwipeDismissBehavior
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.ruangaldo.fooddelivery.R
+import com.ruangaldo.fooddelivery.shared.domain.Authorized
 import com.ruangaldo.fooddelivery.shared.domain.InvalidData
 
 /**
@@ -18,15 +19,16 @@ fun Context.showSnackbar(
     view: View,
     type: Throwable
 ) {
-    lateinit var mSnackBar: Snackbar
-
-    mSnackBar = Snackbar.make(
+    var mSnackBar: Snackbar = Snackbar.make(
         view,
         when (type) {
-            InvalidData() -> {
-                "Akun anda telah terdaftar, Silahkan ganti yang lain"
+            is InvalidData -> {
+                "Akun anda telah terdaftar, silahkan ganti yang lain"
             }
 
+            is Authorized -> {
+                "Akun anda belum terdaftar, silahkan melanjutkan proses daftar."
+            }
             else -> {
                 "Periksa konektivitas anda."
             }
