@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.factories
+package com.ruangaldo.fooddelivery.factories.user
 
 import android.content.Context
 import com.ruangaldo.fooddelivery.features.user.data.local.UserInfoPrefRepository

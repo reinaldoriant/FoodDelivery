@@ -1,8 +1,7 @@
-package com.ruangaldo.fooddelivery.factories
+package com.ruangaldo.fooddelivery.factories.user
 
 import android.content.Context
 import com.ruangaldo.fooddelivery.features.user.data.local.GetUserInfoPrefUseCase
-import com.ruangaldo.fooddelivery.features.user.data.local.InsertUserInfoPrefUseCase
 
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.

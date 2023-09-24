@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.factories
+package com.ruangaldo.fooddelivery.factories.login
 
 import com.ruangaldo.fooddelivery.features.login.data.remote.service.LoginRemoteService
 import com.ruangaldo.fooddelivery.framework.HttpFactory

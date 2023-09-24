@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.ruangaldo.fooddelivery.R
-import com.ruangaldo.fooddelivery.factories.OnBoardingViewModelFactory
+import com.ruangaldo.fooddelivery.factories.onboarding.OnBoardingViewModelFactory
 import com.ruangaldo.fooddelivery.features.home.ui.HomeActivity
 import com.ruangaldo.fooddelivery.features.login.ui.LoginActivity
 import com.ruangaldo.fooddelivery.features.onboarding.presentation.OnBoardingViewModel

@@ -1,10 +1,10 @@
-package com.ruangaldo.fooddelivery.factories
+package com.ruangaldo.fooddelivery.factories.register
 
 import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import com.ruangaldo.fooddelivery.features.login.presentation.LoginViewModel
+import com.ruangaldo.fooddelivery.factories.user.InsertUserinfoPrefUseCaseFactory
 import com.ruangaldo.fooddelivery.features.register.presentation.RegisterViewModel
 
 /**

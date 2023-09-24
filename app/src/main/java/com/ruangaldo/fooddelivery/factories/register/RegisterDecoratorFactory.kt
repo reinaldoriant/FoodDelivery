@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.factories
+package com.ruangaldo.fooddelivery.factories.register
 
 import com.ruangaldo.fooddelivery.decorator.RegisterCacheDecorator
 import com.ruangaldo.fooddelivery.features.register.domain.IRegister

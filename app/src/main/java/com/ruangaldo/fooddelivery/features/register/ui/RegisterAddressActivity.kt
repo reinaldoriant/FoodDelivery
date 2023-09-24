@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.ruangaldo.fooddelivery.R
 import com.ruangaldo.fooddelivery.databinding.ActivityRegisterAddressBinding
-import com.ruangaldo.fooddelivery.factories.RegisterViewModelFactory
+import com.ruangaldo.fooddelivery.factories.register.RegisterViewModelFactory
 import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
 import com.ruangaldo.fooddelivery.features.register.presentation.RegisterViewModel
