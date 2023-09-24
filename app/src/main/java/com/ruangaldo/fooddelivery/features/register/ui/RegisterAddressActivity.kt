@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.ruangaldo.fooddelivery.MainActivity
 import com.ruangaldo.fooddelivery.R
 import com.ruangaldo.fooddelivery.databinding.ActivityRegisterAddressBinding
-import com.ruangaldo.fooddelivery.factories.RegisterViewModelFactory
+import com.ruangaldo.fooddelivery.factories.register.RegisterViewModelFactory
+import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
 import com.ruangaldo.fooddelivery.features.register.presentation.RegisterViewModel
 import com.ruangaldo.fooddelivery.shared.domain.ViewResource
@@ -118,7 +118,7 @@ class RegisterAddressActivity : AppCompatActivity() {
     private fun initViewModel() {
         _registerVM = ViewModelProvider(
             this,
-            RegisterViewModelFactory.FACTORY
+            RegisterViewModelFactory.createFactory(this@RegisterAddressActivity)
         )[RegisterViewModel::class.java]
     }
 

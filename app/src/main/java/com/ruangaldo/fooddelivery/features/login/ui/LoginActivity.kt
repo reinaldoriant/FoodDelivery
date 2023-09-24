@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.ruangaldo.fooddelivery.MainActivity
+import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
 import com.ruangaldo.fooddelivery.R
 import com.ruangaldo.fooddelivery.databinding.ActivityLoginBinding
-import com.ruangaldo.fooddelivery.factories.LoginViewModelFactory
+import com.ruangaldo.fooddelivery.factories.login.LoginViewModelFactory
 import com.ruangaldo.fooddelivery.features.login.domain.LoginRequestEntity
 import com.ruangaldo.fooddelivery.features.login.presentation.LoginViewModel
 import com.ruangaldo.fooddelivery.features.register.ui.RegisterUserInfoActivity
@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
     private fun initViewModel() {
         _loginVM = ViewModelProvider(
             this,
-            LoginViewModelFactory.FACTORY
+            LoginViewModelFactory.createFactory(this@LoginActivity)
         )[LoginViewModel::class.java]
     }
 
