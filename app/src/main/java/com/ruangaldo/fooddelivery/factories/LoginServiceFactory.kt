@@ -1,7 +1,7 @@
 package com.ruangaldo.fooddelivery.factories
 
 import com.ruangaldo.fooddelivery.features.login.data.remote.service.LoginRemoteService
-import com.ruangaldo.fooddelivery.shared.framework.HttpFactory
+import com.ruangaldo.fooddelivery.framework.HttpFactory
 
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.
