@@ -1,6 +1,5 @@
-package com.ruangaldo.mycrypto.factories
+package com.ruangaldo.fooddelivery.factories
 
-import com.ruangaldo.fooddelivery.factories.RegisterServiceFactory
 import com.ruangaldo.fooddelivery.features.register.data.remote.repository.RegisterRemoteRepository
 
 /**
