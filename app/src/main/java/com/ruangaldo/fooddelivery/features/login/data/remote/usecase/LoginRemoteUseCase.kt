@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.flow
  * Github: https://github.com/reinaldoriant
  */
 
+// Jangan terlalu banyak depend
 class LoginRemoteUseCase constructor(
     private val repository: ILoginRemoteRepository
 ) :

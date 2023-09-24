@@ -5,6 +5,8 @@ package com.ruangaldo.fooddelivery.shared.domain
  * Github: https://github.com/reinaldoriant
  */
 
+// terlalu banyak plan kedepannya. Ini tidak perlu, masuk ke extreme programming -> solusi
+// harusnya dibuat shared itu setelah banyak yang memakai. Kalau di konsep TDD fokus dengan satu hal current condition
 sealed class ViewResource<T> (
     val data: T? = null,
     val errorThrowable: Throwable? = null

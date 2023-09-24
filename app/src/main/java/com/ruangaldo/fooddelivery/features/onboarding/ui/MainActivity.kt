@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         observeViewModel()
     }
 
+    // PR untuk Horizontal Modular untuk passing view model factory di UI
     private fun initViewModel() {
         _onBoardingVM = ViewModelProvider(
             this,

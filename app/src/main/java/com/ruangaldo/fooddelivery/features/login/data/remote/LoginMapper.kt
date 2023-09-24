@@ -10,6 +10,7 @@ import com.ruangaldo.fooddelivery.features.login.domain.LoginRequestEntity
  * Github: https://github.com/reinaldoriant
  */
 
+// Kalau pakai extension tidak bisa di mock
 fun LoginData?.toLoginEntity(): LoginEntity =
     this.let {
         LoginEntity(
