@@ -35,7 +35,6 @@ class RegisterRemoteRepository constructor(private val service: RegisterRemoteSe
             if (throwable is HttpException) {
                 emit(
                     DataResource.Error(
-                        code = throwable.code(),
                         throwable = InvalidDataException()
                     )
                 )
