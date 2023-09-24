@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import androidx.appcompat.app.AppCompatActivity
 import com.ruangaldo.fooddelivery.databinding.ActivityRegisterUserInfoBinding
+import com.ruangaldo.fooddelivery.shared.ui.navigation.clickBackPressed
 
 class RegisterUserInfoActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityRegisterUserInfoBinding
@@ -15,52 +16,80 @@ class RegisterUserInfoActivity : AppCompatActivity() {
         val view = _binding.root
         setContentView(view)
 
+        this@RegisterUserInfoActivity.clickBackPressed {
+            finish()
+        }
+
         with(_binding) {
-            btSignUp.setOnClickListener {
+            ivBackNavbar.setOnClickListener {
+                finish()
+            }
+
+            btContinue.setOnClickListener {
                 val name = etName.text.toString()
                 val email = etEmail.text.toString()
                 val password = etPassword.text.toString()
                 val passwordVerification = etPasswordVerification.text.toString()
 
-                tfName.isErrorEnabled = false
-                tfEmail.isErrorEnabled = false
-                tfPassword.isErrorEnabled = false
-                tfPasswordVerification.isErrorEnabled = false
-
-                if (name.isEmpty()) {
-                    tfName.error = "Nama harus diisi."
-                    tfName.isErrorEnabled = true
-                }
-
-                if (email.isEmpty()) {
-                    tfEmail.error = "Email harus diisi."
-                    tfEmail.isErrorEnabled = true
-                }
-
-                if (password.isEmpty()) {
-                    tfPassword.error = "Kata sandi harus diisi."
-                    tfPassword.isErrorEnabled = true
-                }
-
-                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    tfEmail.error = "Masukkan format email dengan benar dan valid."
-                    tfEmail.isErrorEnabled = true
-                }
-
-                if (password.length < 8) {
-                    tfPassword.error = "Kata sandi minimal 8 karakter."
-                    tfPassword.isErrorEnabled = true
-                }
-
-                if (passwordVerification != password) {
-                    tfPasswordVerification.error = "Kata sandi tidak sama."
-                    tfPasswordVerification.isErrorEnabled = true
-                }
-
-                if (password.length >= 8) {
+                if (checkInput(name, email, password, passwordVerification)) {
                     navigateToRegisterAdress(name, email, password)
                 }
             }
+        }
+    }
+
+    private fun checkInput(
+        name: String,
+        email: String,
+        password: String,
+        passwordVerification: String
+    ): Boolean {
+        with(_binding) {
+            tfName.isErrorEnabled = false
+            tfEmail.isErrorEnabled = false
+            tfPassword.isErrorEnabled = false
+            tfPasswordVerification.isErrorEnabled = false
+
+            if (name.isEmpty()) {
+                tfName.error = "Nama harus diisi."
+                tfName.isErrorEnabled = true
+                return false
+            }
+
+            if (email.isEmpty()) {
+                tfEmail.error = "Email harus diisi."
+                tfEmail.isErrorEnabled = true
+                return false
+            }
+
+            if (password.isEmpty()) {
+                tfPassword.error = "Kata sandi harus diisi."
+                tfPassword.isErrorEnabled = true
+                return false
+            }
+
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                tfEmail.error = "Masukkan format email dengan benar dan valid."
+                tfEmail.isErrorEnabled = true
+                return false
+            }
+
+            if (password.length < 8) {
+                tfPassword.error = "Kata sandi minimal 8 karakter."
+                tfPassword.isErrorEnabled = true
+                etPassword.text = null
+                etPasswordVerification.text = null
+                return false
+            }
+
+            if (passwordVerification != password) {
+                tfPasswordVerification.error = "Kata sandi tidak sama."
+                tfPasswordVerification.isErrorEnabled = true
+                etPassword.text = null
+                etPasswordVerification.text = null
+                return false
+            }
+            return true
         }
     }
 
