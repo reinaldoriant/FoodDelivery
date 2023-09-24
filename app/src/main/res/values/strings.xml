@@ -8,5 +8,10 @@
     <string name="et_email">Email <font color='#FF0000'>*</font></string>
     <string name="et_password">Kata Sandi <font color='#FF0000'>*</font></string>
     <string name="et_password_verification">Konfirmasi Kata Sandi <font color='#FF0000'>*</font></string>
+    <string name="et_phone_number">Nomor HP <font color='#FF0000'>*</font></string>
+    <string name="et_address">Alamat <font color='#FF0000'>*</font></string>
+    <string name="et_home_number">Nomor Rumah <font color='#FF0000'>*</font></string>
+    <string name="et_city">Kota <font color='#FF0000'>*</font></string>
+    <string name="bt_register">Daftar Sekarang</string>
     <string name="bt_continue">Lanjutkan</string>
 </resources>
