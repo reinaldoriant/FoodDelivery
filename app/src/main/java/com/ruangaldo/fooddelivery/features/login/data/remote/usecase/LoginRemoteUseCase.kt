@@ -22,7 +22,9 @@ import kotlinx.coroutines.flow.flow
  * Github: https://github.com/reinaldoriant
  */
 
-class LoginRemoteUseCase constructor(private val repository: ILoginRemoteRepository) :
+class LoginRemoteUseCase constructor(
+    private val repository: ILoginRemoteRepository
+) :
     ILogin {
     override fun post(request: LoginRequestEntity):
         Flow<ViewResource<LoginEntity>> = flow {
