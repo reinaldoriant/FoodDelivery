@@ -7,16 +7,17 @@ package com.ruangaldo.fooddelivery.shared.domain
 
 sealed class ViewResource<T> (
     val data: T? = null,
-    val errorThrowable: Throwable? = null,
+    val errorThrowable: Throwable? = null
 ) {
     data class Success<T>(
-        var root: T,
+        var root: T
     ) : ViewResource<T>(data = root)
 
     data class Error<T>(
-        var throwable: Throwable?,
+        var throwable: Throwable?
     ) : ViewResource<T>(errorThrowable = throwable)
 }
 
 class InvalidData : Throwable()
 class Connectivity : Throwable()
+class Authorized : Throwable()
