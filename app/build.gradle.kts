@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.ruangaldo.fooddelivery"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.ruangaldo.fooddelivery"
@@ -56,4 +56,8 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
     implementation(libs.converter.moshi)
+
+    implementation(libs.lifecycle.runtime)
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata)
 }
