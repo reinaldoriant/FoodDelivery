@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class LoginRemoteResponse(
-    var data: RegisterData?,
+    var data: LoginData?,
     var meta: LoginMeta?
 )
 
