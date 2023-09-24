@@ -3,6 +3,7 @@ package com.ruangaldo.fooddelivery.features.login.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.distinctUntilChanged
 import androidx.lifecycle.viewModelScope
 import com.ruangaldo.fooddelivery.features.login.domain.ILogin
 import com.ruangaldo.fooddelivery.features.login.domain.LoginEntity
@@ -16,7 +17,7 @@ import kotlinx.coroutines.launch
  */
 
 class LoginViewModel constructor(private val login: ILogin) : ViewModel() {
-    val loginUi: LiveData<ViewResource<LoginEntity>> get() = _loginUi
+    val loginUi: LiveData<ViewResource<LoginEntity>> get() = _loginUi.distinctUntilChanged()
     private val _loginUi = MutableLiveData<ViewResource<LoginEntity>>()
 
     fun post(request: LoginRequestEntity) {
