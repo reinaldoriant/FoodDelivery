@@ -8,12 +8,11 @@ import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
 import com.ruangaldo.fooddelivery.R
 import com.ruangaldo.fooddelivery.databinding.ActivityLoginBinding
 import com.ruangaldo.fooddelivery.factories.login.LoginViewModelFactory
-import com.ruangaldo.fooddelivery.features.login.domain.LoginRequestEntity
-import com.ruangaldo.fooddelivery.features.login.presentation.LoginViewModel
+import com.ruangaldo.presentation.LoginViewModel
 import com.ruangaldo.fooddelivery.features.register.ui.RegisterUserInfoActivity
-import com.ruangaldo.fooddelivery.shared.domain.ViewResource
-import com.ruangaldo.fooddelivery.shared.ui.navigation.clickBackPressed
-import com.ruangaldo.fooddelivery.shared.ui.showSnackbar
+import com.ruangaldo.shared.domain.ViewResource
+import com.ruangaldo.shared.ui.navigation.clickBackPressed
+import com.ruangaldo.shared.ui.showSnackbar
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityLoginBinding
@@ -43,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
 
                 if (checkInput(email, password)) {
                     _loginVM.post(
-                        LoginRequestEntity(
+                        com.ruangaldo.domain.LoginRequestEntity(
                             email = email,
                             password = password
                         )
