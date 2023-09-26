@@ -8,7 +8,7 @@ import com.ruangaldo.domain.LoginRequestEntity
 import com.ruangaldo.fooddelivery.databinding.ActivityLoginBinding
 import com.ruangaldo.fooddelivery.factories.login.LoginViewModelFactory
 import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
-import com.ruangaldo.fooddelivery.features.register.ui.RegisterUserInfoActivity
+import com.ruangaldo.fooddelivery.ui.register.RegisterUserInfoActivity
 import com.ruangaldo.presentation.LoginViewModel
 import com.ruangaldo.shared.domain.ViewResource
 import com.ruangaldo.shared.ui.navigation.clickBackPressed

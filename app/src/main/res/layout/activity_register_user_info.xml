@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.register.ui.RegisterUserInfoActivity">
+    tools:context=".ui.register.RegisterUserInfoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_navbar"

@@ -22,10 +22,10 @@
             android:exported="false">
         </activity>
         <activity
-            android:name=".features.register.ui.RegisterAddressActivity"
+            android:name=".ui.register.RegisterAddressActivity"
             android:exported="false" />
         <activity
-            android:name=".features.register.ui.RegisterUserInfoActivity"
+            android:name=".ui.register.RegisterUserInfoActivity"
             android:exported="false" />
         <activity
             android:name=".features.onboarding.ui.MainActivity"

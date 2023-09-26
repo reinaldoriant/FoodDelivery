@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.features.register.ui
+package com.ruangaldo.fooddelivery.ui.register
 
 import android.content.Intent
 import android.os.Bundle
