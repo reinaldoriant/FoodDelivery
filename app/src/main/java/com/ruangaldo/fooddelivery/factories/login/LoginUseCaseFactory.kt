@@ -1,7 +1,5 @@
 package com.ruangaldo.fooddelivery.factories.login
 
-import com.ruangaldo.fooddelivery.features.login.data.remote.usecase.LoginRemoteUseCase
-
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.
  * Github: https://github.com/reinaldoriant
@@ -9,8 +7,8 @@ import com.ruangaldo.fooddelivery.features.login.data.remote.usecase.LoginRemote
 
 class LoginUseCaseFactory {
     companion object {
-        fun createLoginUseCase(): LoginRemoteUseCase {
-            return LoginRemoteUseCase(
+        fun createLoginUseCase(): com.ruangaldo.shared.usecase.LoginRemoteUseCase {
+            return com.ruangaldo.shared.usecase.LoginRemoteUseCase(
                 LoginRemoteRepositoryFactory.createLoginRemoteRepository()
             )
         }

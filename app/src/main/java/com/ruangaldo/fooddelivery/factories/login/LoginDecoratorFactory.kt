@@ -1,7 +1,7 @@
 package com.ruangaldo.fooddelivery.factories.login
 
 import com.ruangaldo.fooddelivery.decorator.LoginCacheDecorator
-import com.ruangaldo.fooddelivery.features.login.domain.ILogin
+import com.ruangaldo.domain.ILogin
 import com.ruangaldo.fooddelivery.features.user.domain.ISaveUserInfo
 
 /**
@@ -12,9 +12,9 @@ import com.ruangaldo.fooddelivery.features.user.domain.ISaveUserInfo
 class LoginDecoratorFactory {
     companion object {
         fun createLoginDecorator(
-            decorator: ILogin,
+            decorator: com.ruangaldo.domain.ILogin,
             cache: ISaveUserInfo
-        ): ILogin {
+        ): com.ruangaldo.domain.ILogin {
             return LoginCacheDecorator(
                 decorator,
                 cache

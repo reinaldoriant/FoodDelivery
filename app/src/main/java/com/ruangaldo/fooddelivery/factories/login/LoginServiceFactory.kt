@@ -1,6 +1,5 @@
 package com.ruangaldo.fooddelivery.factories.login
 
-import com.ruangaldo.fooddelivery.features.login.data.remote.service.LoginRemoteService
 import com.ruangaldo.fooddelivery.framework.HttpFactory
 
 /**
@@ -10,13 +9,13 @@ import com.ruangaldo.fooddelivery.framework.HttpFactory
 
 class LoginServiceFactory {
     companion object {
-        fun createLoginService(): LoginRemoteService {
+        fun createLoginService(): com.ruangaldo.shared.service.LoginRemoteService {
             return HttpFactory.createRetrofit(
                 HttpFactory.createMoshi(),
                 HttpFactory.createOkhttpClient(
                     HttpFactory.createLoggingInterceptor()
                 )
-            ).create(LoginRemoteService::class.java)
+            ).create(com.ruangaldo.shared.service.LoginRemoteService::class.java)
         }
     }
 }
