@@ -46,6 +46,8 @@ dependencies {
     implementation(project(":login:domain"))
     implementation(project(":login:presentation"))
     implementation(project(":register:data:remote"))
+    implementation(project(":register:domain"))
+    implementation(project(":register:presentation"))
     implementation(project(":shared"))
 
     implementation(libs.core.ktx)
