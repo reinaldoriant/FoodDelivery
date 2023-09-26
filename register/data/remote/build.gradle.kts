@@ -43,7 +43,6 @@ android {
 dependencies {
     implementation(project(":shared"))
     implementation(project(":login:domain"))
-    implementation(project(":login:presentation"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
