@@ -9,14 +9,14 @@ import com.ruangaldo.fooddelivery.databinding.ActivityRegisterAddressBinding
 import com.ruangaldo.fooddelivery.factories.register.RegisterViewModelFactory
 import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
 import com.ruangaldo.domain.RegisterRequestEntity
-import com.ruangaldo.fooddelivery.features.register.presentation.RegisterViewModel
+import com.ruangaldo.presentation.RegisterViewModel
 import com.ruangaldo.shared.domain.ViewResource
 import com.ruangaldo.shared.ui.navigation.clickBackPressed
 import com.ruangaldo.shared.ui.showSnackbar
 
 class RegisterAddressActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityRegisterAddressBinding
-    private lateinit var _registerVM: RegisterViewModel
+    private lateinit var _registerVM: com.ruangaldo.presentation.RegisterViewModel
 
     private lateinit var name: String
     private lateinit var email: String
@@ -119,7 +119,7 @@ class RegisterAddressActivity : AppCompatActivity() {
         _registerVM = ViewModelProvider(
             this,
             RegisterViewModelFactory.createFactory(this@RegisterAddressActivity)
-        )[RegisterViewModel::class.java]
+        )[com.ruangaldo.presentation.RegisterViewModel::class.java]
     }
 
     private fun observeViewModel() {

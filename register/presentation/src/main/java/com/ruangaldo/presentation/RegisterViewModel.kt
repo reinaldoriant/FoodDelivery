@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.features.register.presentation
+package com.ruangaldo.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
