@@ -42,12 +42,18 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation(project(":login:domain"))
+    implementation(project(":register:domain"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation(libs.retrofit)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    implementation(libs.converter.moshi)
 }
 
