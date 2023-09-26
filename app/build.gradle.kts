@@ -42,6 +42,11 @@ android {
 }
 
 dependencies {
+    implementation(project(":login:data:remote"))
+    implementation(project(":login:domain"))
+    implementation(project(":login:presentation"))
+    implementation(project(":login:ui"))
+    implementation(project(":shared"))
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
@@ -50,16 +55,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-    implementation(libs.retrofit)
-    implementation(libs.moshi.kotlin)
-    implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
-    implementation(libs.converter.moshi)
-
-    implementation(libs.lifecycle.runtime)
-    implementation(libs.lifecycle.viewmodel)
-    implementation(libs.lifecycle.livedata)
 
     implementation(libs.datastore)
 }
