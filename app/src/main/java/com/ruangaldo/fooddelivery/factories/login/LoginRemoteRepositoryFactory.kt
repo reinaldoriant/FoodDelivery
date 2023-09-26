@@ -1,7 +1,5 @@
 package com.ruangaldo.fooddelivery.factories.login
 
-import com.ruangaldo.fooddelivery.features.login.data.remote.repository.LoginRemoteRepository
-
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.
  * Github: https://github.com/reinaldoriant
@@ -9,8 +7,8 @@ import com.ruangaldo.fooddelivery.features.login.data.remote.repository.LoginRem
 
 class LoginRemoteRepositoryFactory {
     companion object {
-        fun createLoginRemoteRepository(): LoginRemoteRepository {
-            return LoginRemoteRepository(
+        fun createLoginRemoteRepository(): com.ruangaldo.shared.repository.LoginRemoteRepository {
+            return com.ruangaldo.shared.repository.LoginRemoteRepository(
                 LoginServiceFactory.createLoginService()
             )
         }

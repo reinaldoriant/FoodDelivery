@@ -1,18 +1,15 @@
-package com.ruangaldo.fooddelivery.features.login.ui
+package com.ruangaldo.ui
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
-import com.ruangaldo.fooddelivery.R
-import com.ruangaldo.fooddelivery.databinding.ActivityLoginBinding
+import com.ruangaldo.domain.LoginRequestEntity
 import com.ruangaldo.fooddelivery.factories.login.LoginViewModelFactory
 import com.ruangaldo.presentation.LoginViewModel
-import com.ruangaldo.fooddelivery.features.register.ui.RegisterUserInfoActivity
 import com.ruangaldo.shared.domain.ViewResource
 import com.ruangaldo.shared.ui.navigation.clickBackPressed
 import com.ruangaldo.shared.ui.showSnackbar
+import com.ruangaldo.ui.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityLoginBinding
@@ -20,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_address)
+        setContentView(R.layout.activity_login)
         _binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = _binding.root
         setContentView(view)
@@ -32,9 +29,9 @@ class LoginActivity : AppCompatActivity() {
 
         with(_binding) {
             btCreateAccount.setOnClickListener {
-                startActivity(
-                    Intent(this@LoginActivity, RegisterUserInfoActivity::class.java)
-                )
+//                startActivity(
+//                    Intent(this@LoginActivity, RegisterUserInfoActivity::class.java)
+//                )
             }
             btLogin.setOnClickListener {
                 val email = etEmail.text.toString()
@@ -42,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
 
                 if (checkInput(email, password)) {
                     _loginVM.post(
-                        com.ruangaldo.domain.LoginRequestEntity(
+                        LoginRequestEntity(
                             email = email,
                             password = password
                         )
@@ -88,9 +85,9 @@ class LoginActivity : AppCompatActivity() {
         _loginVM.loginUi.observe(this) { result ->
             when (result) {
                 is ViewResource.Success -> {
-                    startActivity(
-                        Intent(this@LoginActivity, MainActivity::class.java)
-                    )
+//                    startActivity(
+//                        Intent(this@LoginActivity, MainActivity::class.java)
+//                    )
                     finishAffinity()
                 }
                 is ViewResource.Error -> {
@@ -100,3 +97,4 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
+

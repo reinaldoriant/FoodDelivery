@@ -3,9 +3,9 @@ package com.ruangaldo.fooddelivery.features.register.data.remote.repository
 import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
 import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteResponse
 import com.ruangaldo.fooddelivery.features.register.data.remote.service.RegisterRemoteService
-import com.ruangaldo.fooddelivery.shared.data.ConnectivityException
-import com.ruangaldo.fooddelivery.shared.data.DataResource
-import com.ruangaldo.fooddelivery.shared.data.InvalidDataException
+import com.ruangaldo.shared.data.ConnectivityException
+import com.ruangaldo.shared.data.DataResource
+import com.ruangaldo.shared.data.InvalidDataException
 import java.io.IOException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

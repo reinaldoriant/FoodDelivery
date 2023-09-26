@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.ruangaldo.fooddelivery.features.register.domain.IRegister
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
-import com.ruangaldo.fooddelivery.shared.domain.ViewResource
+import com.ruangaldo.shared.domain.ViewResource
 import kotlinx.coroutines.launch
 
 /**

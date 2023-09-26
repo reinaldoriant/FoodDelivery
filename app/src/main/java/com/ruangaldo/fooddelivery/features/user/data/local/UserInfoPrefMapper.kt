@@ -1,6 +1,6 @@
 package com.ruangaldo.fooddelivery.features.user.data.local
 
-import com.ruangaldo.fooddelivery.features.login.domain.LoginEntity
+import com.ruangaldo.domain.LoginEntity
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
 import com.ruangaldo.fooddelivery.features.user.domain.UserInfoEntity
 
@@ -9,7 +9,7 @@ import com.ruangaldo.fooddelivery.features.user.domain.UserInfoEntity
  * Github: https://github.com/reinaldoriant
  */
 
-fun LoginEntity?.toUserInfoEntity(): UserInfoEntity =
+fun com.ruangaldo.domain.LoginEntity?.toUserInfoEntity(): UserInfoEntity =
     this.let {
         UserInfoEntity(
             token = it?.token.orEmpty(),

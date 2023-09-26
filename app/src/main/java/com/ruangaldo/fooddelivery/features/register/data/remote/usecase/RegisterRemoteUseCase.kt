@@ -6,12 +6,12 @@ import com.ruangaldo.fooddelivery.features.register.data.remote.toRegisterRemote
 import com.ruangaldo.fooddelivery.features.register.domain.IRegister
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
-import com.ruangaldo.fooddelivery.shared.data.ConnectivityException
-import com.ruangaldo.fooddelivery.shared.data.DataResource
-import com.ruangaldo.fooddelivery.shared.data.InvalidDataException
-import com.ruangaldo.fooddelivery.shared.domain.Connectivity
-import com.ruangaldo.fooddelivery.shared.domain.InvalidData
-import com.ruangaldo.fooddelivery.shared.domain.ViewResource
+import com.ruangaldo.shared.data.ConnectivityException
+import com.ruangaldo.shared.data.DataResource
+import com.ruangaldo.shared.data.InvalidDataException
+import com.ruangaldo.shared.domain.Connectivity
+import com.ruangaldo.shared.domain.InvalidData
+import com.ruangaldo.shared.domain.ViewResource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

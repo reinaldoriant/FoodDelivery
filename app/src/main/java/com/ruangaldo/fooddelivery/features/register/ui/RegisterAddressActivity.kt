@@ -10,9 +10,9 @@ import com.ruangaldo.fooddelivery.factories.register.RegisterViewModelFactory
 import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
 import com.ruangaldo.fooddelivery.features.register.presentation.RegisterViewModel
-import com.ruangaldo.fooddelivery.shared.domain.ViewResource
-import com.ruangaldo.fooddelivery.shared.ui.navigation.clickBackPressed
-import com.ruangaldo.fooddelivery.shared.ui.showSnackbar
+import com.ruangaldo.shared.domain.ViewResource
+import com.ruangaldo.shared.ui.navigation.clickBackPressed
+import com.ruangaldo.shared.ui.showSnackbar
 
 class RegisterAddressActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityRegisterAddressBinding

@@ -18,7 +18,7 @@
             android:name=".features.home.ui.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".features.login.ui.LoginActivity"
+            android:name="com.ruangaldo.ui.LoginActivity"
             android:exported="false">
         </activity>
         <activity

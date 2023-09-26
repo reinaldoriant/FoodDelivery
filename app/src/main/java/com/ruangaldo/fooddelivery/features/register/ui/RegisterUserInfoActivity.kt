@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import androidx.appcompat.app.AppCompatActivity
 import com.ruangaldo.fooddelivery.databinding.ActivityRegisterUserInfoBinding
-import com.ruangaldo.fooddelivery.shared.ui.navigation.clickBackPressed
+import com.ruangaldo.shared.ui.navigation.clickBackPressed
 
 class RegisterUserInfoActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityRegisterUserInfoBinding

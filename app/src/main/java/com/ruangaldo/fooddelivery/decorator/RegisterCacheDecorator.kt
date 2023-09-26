@@ -1,14 +1,11 @@
 package com.ruangaldo.fooddelivery.decorator
 
-import com.ruangaldo.fooddelivery.features.login.domain.ILogin
-import com.ruangaldo.fooddelivery.features.login.domain.LoginEntity
-import com.ruangaldo.fooddelivery.features.login.domain.LoginRequestEntity
 import com.ruangaldo.fooddelivery.features.register.domain.IRegister
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
 import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
 import com.ruangaldo.fooddelivery.features.user.data.local.toUserInfoEntity
 import com.ruangaldo.fooddelivery.features.user.domain.ISaveUserInfo
-import com.ruangaldo.fooddelivery.shared.domain.ViewResource
+import com.ruangaldo.shared.domain.ViewResource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
