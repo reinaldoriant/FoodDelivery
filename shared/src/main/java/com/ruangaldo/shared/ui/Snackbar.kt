@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.shared.ui
+package com.ruangaldo.shared.ui
 
 import android.content.Context
 import android.view.View
@@ -7,8 +7,8 @@ import com.google.android.material.behavior.SwipeDismissBehavior
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.ruangaldo.fooddelivery.R
-import com.ruangaldo.fooddelivery.shared.domain.Authorized
-import com.ruangaldo.fooddelivery.shared.domain.InvalidData
+import com.ruangaldo.shared.domain.Authorized
+import com.ruangaldo.shared.domain.InvalidData
 
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.

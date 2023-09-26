@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.shared.data
+package com.ruangaldo.shared.data
 
 /**
  * Written with joy and smile by Ruang Aldo on 23/09/23.
