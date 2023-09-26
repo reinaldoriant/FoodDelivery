@@ -1,4 +1,4 @@
-package com.ruangaldo.login
+package com.ruangaldo.domain
 
 import org.junit.Test
 
