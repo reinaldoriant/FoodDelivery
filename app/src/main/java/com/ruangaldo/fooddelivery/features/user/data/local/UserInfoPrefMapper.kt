@@ -1,6 +1,5 @@
 package com.ruangaldo.fooddelivery.features.user.data.local
 
-import com.ruangaldo.domain.LoginEntity
 import com.ruangaldo.domain.RegisterEntity
 import com.ruangaldo.fooddelivery.features.user.domain.UserInfoEntity
 

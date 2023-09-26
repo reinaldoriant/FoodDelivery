@@ -1,7 +1,7 @@
-package com.ruangaldo.fooddelivery.features.register.data.remote.service
+package com.ruangaldo.remote.service
 
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteResponse
+import com.ruangaldo.remote.model.RegisterRemoteRequest
+import com.ruangaldo.remote.model.RegisterRemoteResponse
 import retrofit2.http.Body
 import retrofit2.http.POST
 

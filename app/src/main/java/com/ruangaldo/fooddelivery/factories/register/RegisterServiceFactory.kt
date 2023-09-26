@@ -1,6 +1,6 @@
 package com.ruangaldo.fooddelivery.factories.register
 
-import com.ruangaldo.fooddelivery.features.register.data.remote.service.RegisterRemoteService
+import com.ruangaldo.remote.service.RegisterRemoteService
 import com.ruangaldo.fooddelivery.framework.HttpFactory
 
 /**

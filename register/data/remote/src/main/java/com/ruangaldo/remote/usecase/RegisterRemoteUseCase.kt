@@ -1,11 +1,8 @@
-package com.ruangaldo.fooddelivery.features.register.data.remote.usecase
+package com.ruangaldo.remote.usecase
 
-import com.ruangaldo.fooddelivery.features.register.data.remote.repository.IRegisterRemoteRepository
-import com.ruangaldo.fooddelivery.features.register.data.remote.toRegisterEntity
-import com.ruangaldo.fooddelivery.features.register.data.remote.toRegisterRemoteRequest
-import com.ruangaldo.domain.IRegister
-import com.ruangaldo.domain.RegisterEntity
-import com.ruangaldo.domain.RegisterRequestEntity
+import com.ruangaldo.remote.repository.IRegisterRemoteRepository
+import com.ruangaldo.remote.toRegisterEntity
+import com.ruangaldo.remote.toRegisterRemoteRequest
 import com.ruangaldo.shared.data.ConnectivityException
 import com.ruangaldo.shared.data.DataResource
 import com.ruangaldo.shared.data.InvalidDataException

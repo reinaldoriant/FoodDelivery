@@ -1,8 +1,8 @@
-package com.ruangaldo.fooddelivery.features.register.data.remote.repository
+package com.ruangaldo.remote.repository
 
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteResponse
-import com.ruangaldo.fooddelivery.features.register.data.remote.service.RegisterRemoteService
+import com.ruangaldo.remote.model.RegisterRemoteRequest
+import com.ruangaldo.remote.model.RegisterRemoteResponse
+import com.ruangaldo.remote.service.RegisterRemoteService
 import com.ruangaldo.shared.data.ConnectivityException
 import com.ruangaldo.shared.data.DataResource
 import com.ruangaldo.shared.data.InvalidDataException

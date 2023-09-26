@@ -1,6 +1,6 @@
 package com.ruangaldo.fooddelivery.factories.register
 
-import com.ruangaldo.fooddelivery.features.register.data.remote.usecase.RegisterRemoteUseCase
+import com.ruangaldo.remote.usecase.RegisterRemoteUseCase
 
 /**
  * Written with joy and smile by Ruang Aldo on 23/09/23.

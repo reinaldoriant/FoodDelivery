@@ -1,9 +1,7 @@
-package com.ruangaldo.fooddelivery.features.register.data.remote
+package com.ruangaldo.remote
 
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterData
-import com.ruangaldo.domain.RegisterEntity
-import com.ruangaldo.domain.RegisterRequestEntity
-import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
+import com.ruangaldo.remote.model.RegisterData
+import com.ruangaldo.remote.model.RegisterRemoteRequest
 
 /**
  * Written with joy and smile by Ruang Aldo on 23/09/23.
