@@ -3,9 +3,9 @@ package com.ruangaldo.fooddelivery.features.register.data.remote.usecase
 import com.ruangaldo.fooddelivery.features.register.data.remote.repository.IRegisterRemoteRepository
 import com.ruangaldo.fooddelivery.features.register.data.remote.toRegisterEntity
 import com.ruangaldo.fooddelivery.features.register.data.remote.toRegisterRemoteRequest
-import com.ruangaldo.fooddelivery.features.register.domain.IRegister
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
+import com.ruangaldo.domain.IRegister
+import com.ruangaldo.domain.RegisterEntity
+import com.ruangaldo.domain.RegisterRequestEntity
 import com.ruangaldo.shared.data.ConnectivityException
 import com.ruangaldo.shared.data.DataResource
 import com.ruangaldo.shared.data.InvalidDataException
@@ -21,9 +21,9 @@ import kotlinx.coroutines.flow.flow
  */
 
 class RegisterRemoteUseCase constructor(private val repository: IRegisterRemoteRepository) :
-    IRegister {
-    override fun post(request: RegisterRequestEntity):
-        Flow<ViewResource<RegisterEntity>> = flow {
+    com.ruangaldo.domain.IRegister {
+    override fun post(request: com.ruangaldo.domain.RegisterRequestEntity):
+        Flow<ViewResource<com.ruangaldo.domain.RegisterEntity>> = flow {
         repository.post(request.toRegisterRemoteRequest()).collect { result ->
             when (result) {
                 is DataResource.Success -> {

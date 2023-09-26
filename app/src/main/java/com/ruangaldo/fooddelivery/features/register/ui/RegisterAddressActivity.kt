@@ -8,7 +8,7 @@ import com.ruangaldo.fooddelivery.R
 import com.ruangaldo.fooddelivery.databinding.ActivityRegisterAddressBinding
 import com.ruangaldo.fooddelivery.factories.register.RegisterViewModelFactory
 import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
+import com.ruangaldo.domain.RegisterRequestEntity
 import com.ruangaldo.fooddelivery.features.register.presentation.RegisterViewModel
 import com.ruangaldo.shared.domain.ViewResource
 import com.ruangaldo.shared.ui.navigation.clickBackPressed
@@ -59,7 +59,7 @@ class RegisterAddressActivity : AppCompatActivity() {
 
                 if (checkInput(phoneNumber, address, homeNumber, city)) {
                     _registerVM.post(
-                        RegisterRequestEntity(
+                        com.ruangaldo.domain.RegisterRequestEntity(
                             name = name,
                             email = email,
                             password = password,

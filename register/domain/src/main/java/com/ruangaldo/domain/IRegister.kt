@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.features.register.domain
+package com.ruangaldo.domain
 
 import com.ruangaldo.shared.domain.ViewResource
 import kotlinx.coroutines.flow.Flow

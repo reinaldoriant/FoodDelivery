@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ruangaldo.fooddelivery.features.register.domain.IRegister
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
+import com.ruangaldo.domain.IRegister
+import com.ruangaldo.domain.RegisterEntity
+import com.ruangaldo.domain.RegisterRequestEntity
 import com.ruangaldo.shared.domain.ViewResource
 import kotlinx.coroutines.launch
 
@@ -15,11 +15,11 @@ import kotlinx.coroutines.launch
  * Github: https://github.com/reinaldoriant
  */
 
-class RegisterViewModel constructor(private val register: IRegister) : ViewModel() {
-    val registerUi: LiveData<ViewResource<RegisterEntity>> get() = _registerUi
-    private val _registerUi = MutableLiveData<ViewResource<RegisterEntity>>()
+class RegisterViewModel constructor(private val register: com.ruangaldo.domain.IRegister) : ViewModel() {
+    val registerUi: LiveData<ViewResource<com.ruangaldo.domain.RegisterEntity>> get() = _registerUi
+    private val _registerUi = MutableLiveData<ViewResource<com.ruangaldo.domain.RegisterEntity>>()
 
-    fun post(request: RegisterRequestEntity) {
+    fun post(request: com.ruangaldo.domain.RegisterRequestEntity) {
         viewModelScope.launch {
             register.post(
                 request

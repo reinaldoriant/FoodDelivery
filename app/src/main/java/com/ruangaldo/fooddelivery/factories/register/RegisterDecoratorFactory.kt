@@ -1,7 +1,7 @@
 package com.ruangaldo.fooddelivery.factories.register
 
 import com.ruangaldo.fooddelivery.decorator.RegisterCacheDecorator
-import com.ruangaldo.fooddelivery.features.register.domain.IRegister
+import com.ruangaldo.domain.IRegister
 import com.ruangaldo.fooddelivery.features.user.domain.ISaveUserInfo
 
 /**
@@ -12,9 +12,9 @@ import com.ruangaldo.fooddelivery.features.user.domain.ISaveUserInfo
 class RegisterDecoratorFactory {
     companion object {
         fun createRegisterDecorator(
-            decorator: IRegister,
+            decorator: com.ruangaldo.domain.IRegister,
             cache: ISaveUserInfo
-        ): IRegister {
+        ): com.ruangaldo.domain.IRegister {
             return RegisterCacheDecorator(
                 decorator,
                 cache

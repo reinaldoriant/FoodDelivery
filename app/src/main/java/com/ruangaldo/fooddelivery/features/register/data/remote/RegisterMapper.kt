@@ -1,8 +1,8 @@
 package com.ruangaldo.fooddelivery.features.register.data.remote
 
 import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterData
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterRequestEntity
+import com.ruangaldo.domain.RegisterEntity
+import com.ruangaldo.domain.RegisterRequestEntity
 import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRemoteRequest
 
 /**
@@ -10,9 +10,9 @@ import com.ruangaldo.fooddelivery.features.register.data.remote.model.RegisterRe
  * Github: https://github.com/reinaldoriant
  */
 
-fun RegisterData?.toRegisterEntity(): RegisterEntity =
+fun RegisterData?.toRegisterEntity(): com.ruangaldo.domain.RegisterEntity =
     this.let {
-        RegisterEntity(
+        com.ruangaldo.domain.RegisterEntity(
             token = it?.accessToken.orEmpty(),
             name = it?.user?.name.orEmpty(),
             address = it?.user?.address.orEmpty(),
@@ -23,7 +23,7 @@ fun RegisterData?.toRegisterEntity(): RegisterEntity =
         )
     }
 
-fun RegisterRequestEntity.toRegisterRemoteRequest(): RegisterRemoteRequest =
+fun com.ruangaldo.domain.RegisterRequestEntity.toRegisterRemoteRequest(): RegisterRemoteRequest =
     this.let {
         RegisterRemoteRequest(
             name = it.name,

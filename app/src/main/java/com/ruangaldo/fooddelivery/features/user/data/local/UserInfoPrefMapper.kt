@@ -1,7 +1,7 @@
 package com.ruangaldo.fooddelivery.features.user.data.local
 
 import com.ruangaldo.domain.LoginEntity
-import com.ruangaldo.fooddelivery.features.register.domain.RegisterEntity
+import com.ruangaldo.domain.RegisterEntity
 import com.ruangaldo.fooddelivery.features.user.domain.UserInfoEntity
 
 /**
@@ -22,7 +22,7 @@ fun com.ruangaldo.domain.LoginEntity?.toUserInfoEntity(): UserInfoEntity =
         )
     }
 
-fun RegisterEntity?.toUserInfoEntity(): UserInfoEntity =
+fun com.ruangaldo.domain.RegisterEntity?.toUserInfoEntity(): UserInfoEntity =
     this.let {
         UserInfoEntity(
             token = it?.token.orEmpty(),
