@@ -7,8 +7,8 @@ package com.ruangaldo.fooddelivery.factories.login
 
 class LoginRemoteRepositoryFactory {
     companion object {
-        fun createLoginRemoteRepository(): com.ruangaldo.shared.repository.LoginRemoteRepository {
-            return com.ruangaldo.shared.repository.LoginRemoteRepository(
+        fun createLoginRemoteRepository(): com.ruangaldo.remote.repository.LoginRemoteRepository {
+            return com.ruangaldo.remote.repository.LoginRemoteRepository(
                 LoginServiceFactory.createLoginService()
             )
         }

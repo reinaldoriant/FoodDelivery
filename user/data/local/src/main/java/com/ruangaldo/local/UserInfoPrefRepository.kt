@@ -3,7 +3,7 @@ package com.ruangaldo.local
 import android.content.Context
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.ruangaldo.fooddelivery.framework.DataStoreFactory.dataStore
+import com.ruangaldo.shared.framework.DataStoreFactory.dataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

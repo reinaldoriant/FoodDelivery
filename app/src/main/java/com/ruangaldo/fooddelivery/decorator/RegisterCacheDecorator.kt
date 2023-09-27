@@ -1,5 +1,6 @@
 package com.ruangaldo.fooddelivery.decorator
 
+import com.ruangaldo.domain.RegisterEntity
 import com.ruangaldo.local.toUserInfoEntity
 import com.ruangaldo.shared.domain.ViewResource
 import kotlinx.coroutines.flow.Flow
@@ -14,12 +15,14 @@ class RegisterCacheDecorator(
     private val decorator: com.ruangaldo.domain.IRegister,
     private val cache: com.ruangaldo.domain.ISaveUserInfo
 ) : com.ruangaldo.domain.IRegister {
-    override fun post(request: com.ruangaldo.domain.RegisterRequestEntity): Flow<ViewResource<com.ruangaldo.domain.RegisterEntity>> = flow {
-        decorator.post(request).collect { response ->
-            if (response is ViewResource.Success) {
-                cache.save(response.data.toUserInfoEntity())
+    override fun post(request: com.ruangaldo.domain.RegisterRequestEntity):
+        Flow<ViewResource<RegisterEntity>> =
+        flow {
+            decorator.post(request).collect { response ->
+                if (response is ViewResource.Success) {
+                    cache.save(response.data.toUserInfoEntity())
+                }
+                emit(response)
             }
-            emit(response)
         }
-    }
 }

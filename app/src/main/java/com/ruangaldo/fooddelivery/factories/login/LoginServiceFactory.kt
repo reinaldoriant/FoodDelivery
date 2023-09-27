@@ -1,6 +1,6 @@
 package com.ruangaldo.fooddelivery.factories.login
 
-import com.ruangaldo.fooddelivery.framework.HttpFactory
+import com.ruangaldo.shared.framework.HttpFactory
 
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.
@@ -9,13 +9,13 @@ import com.ruangaldo.fooddelivery.framework.HttpFactory
 
 class LoginServiceFactory {
     companion object {
-        fun createLoginService(): com.ruangaldo.shared.service.LoginRemoteService {
+        fun createLoginService(): com.ruangaldo.remote.service.LoginRemoteService {
             return HttpFactory.createRetrofit(
                 HttpFactory.createMoshi(),
                 HttpFactory.createOkhttpClient(
                     HttpFactory.createLoggingInterceptor()
                 )
-            ).create(com.ruangaldo.shared.service.LoginRemoteService::class.java)
+            ).create(com.ruangaldo.remote.service.LoginRemoteService::class.java)
         }
     }
 }

@@ -5,8 +5,8 @@ plugins {
 }
 
 android {
-    namespace = "com.ruangaldo.login"
-    compileSdk = 33
+    namespace = "com.ruangaldo.domain"
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24

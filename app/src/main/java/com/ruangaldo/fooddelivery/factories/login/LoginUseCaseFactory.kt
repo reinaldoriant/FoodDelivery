@@ -7,8 +7,8 @@ package com.ruangaldo.fooddelivery.factories.login
 
 class LoginUseCaseFactory {
     companion object {
-        fun createLoginUseCase(): com.ruangaldo.shared.usecase.LoginRemoteUseCase {
-            return com.ruangaldo.shared.usecase.LoginRemoteUseCase(
+        fun createLoginUseCase(): com.ruangaldo.remote.usecase.LoginRemoteUseCase {
+            return com.ruangaldo.remote.usecase.LoginRemoteUseCase(
                 LoginRemoteRepositoryFactory.createLoginRemoteRepository()
             )
         }

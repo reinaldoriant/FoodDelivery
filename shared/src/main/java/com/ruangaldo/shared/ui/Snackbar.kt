@@ -6,7 +6,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.behavior.SwipeDismissBehavior
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
-import com.ruangaldo.fooddelivery.R
+import com.ruangaldo.shared.R
 import com.ruangaldo.shared.domain.Authorized
 import com.ruangaldo.shared.domain.InvalidData
 
@@ -19,7 +19,7 @@ fun Context.showSnackbar(
     view: View,
     type: Throwable
 ) {
-    var mSnackBar: Snackbar = Snackbar.make(
+    val mSnackBar: Snackbar = Snackbar.make(
         view,
         when (type) {
             is InvalidData -> {

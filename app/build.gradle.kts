@@ -42,8 +42,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":login:data:remote"))
     implementation(project(":login:domain"))
+    implementation(project(":login:data:remote"))
     implementation(project(":login:presentation"))
     implementation(project(":register:data:remote"))
     implementation(project(":register:domain"))
@@ -60,7 +60,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
 
     implementation(libs.lifecycle.runtime)
     implementation(libs.lifecycle.viewmodel)

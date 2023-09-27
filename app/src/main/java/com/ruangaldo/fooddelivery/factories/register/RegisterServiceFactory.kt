@@ -1,7 +1,7 @@
 package com.ruangaldo.fooddelivery.factories.register
 
+import com.ruangaldo.shared.framework.HttpFactory
 import com.ruangaldo.remote.service.RegisterRemoteService
-import com.ruangaldo.fooddelivery.framework.HttpFactory
 
 /**
  * Written with joy and smile by Ruang Aldo on 04/09/23.
@@ -15,7 +15,7 @@ class RegisterServiceFactory {
                 HttpFactory.createMoshi(),
                 HttpFactory.createOkhttpClient(
                     HttpFactory.createLoggingInterceptor()
-                ),
+                )
             ).create(RegisterRemoteService::class.java)
         }
     }

@@ -1,8 +1,7 @@
-package com.ruangaldo.fooddelivery.framework
+package com.ruangaldo.shared.framework
 
 import android.content.Context
 import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 
 /**
@@ -11,5 +10,8 @@ import androidx.datastore.preferences.preferencesDataStore
  */
 
 object DataStoreFactory {
-    val Context.dataStore: DataStore<Preferences> by preferencesDataStore("food_delivery_datastore")
+    val Context.dataStore: DataStore<androidx.datastore.preferences.core.Preferences> by
+        preferencesDataStore(
+            "food_delivery_datastore"
+        )
 }

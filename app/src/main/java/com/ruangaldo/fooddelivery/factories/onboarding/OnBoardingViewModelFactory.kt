@@ -17,7 +17,7 @@ class OnBoardingViewModelFactory {
         fun createFactory(context: Context): ViewModelProvider.Factory {
             return viewModelFactory {
                 initializer {
-                    com.ruangaldo.presentation.OnBoardingViewModel(
+                    OnBoardingViewModel(
                         GetUserInfoPrefUseCaseFactory.get(context)
                     )
                 }

@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.ruangaldo.presentation"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -34,7 +34,6 @@ android {
 }
 
 dependencies {
-
     implementation(project(":register:domain"))
     implementation(project(":shared"))
     implementation(libs.core.ktx)

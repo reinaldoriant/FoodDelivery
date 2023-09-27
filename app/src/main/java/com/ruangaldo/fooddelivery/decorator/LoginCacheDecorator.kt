@@ -15,7 +15,8 @@ class LoginCacheDecorator(
     private val decorator: com.ruangaldo.domain.ILogin,
     private val cache: com.ruangaldo.domain.ISaveUserInfo
 ) : com.ruangaldo.domain.ILogin {
-    override fun post(request: com.ruangaldo.domain.LoginRequestEntity): Flow<ViewResource<LoginEntity>> = flow {
+    override fun post(request: com.ruangaldo.domain.LoginRequestEntity):
+        Flow<ViewResource<LoginEntity>> = flow {
         decorator.post(request).collect { response ->
             if (response is ViewResource.Success) {
                 cache.save(response.data.toUserInfoEntity())

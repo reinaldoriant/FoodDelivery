@@ -6,13 +6,13 @@ plugins {
 
 android {
     namespace = "com.ruangaldo.shared"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
+        targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -38,7 +38,15 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.datastore)
+
+    implementation(libs.retrofit)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    implementation(libs.converter.moshi)
 }

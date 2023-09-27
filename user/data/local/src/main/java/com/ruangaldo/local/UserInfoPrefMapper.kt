@@ -1,5 +1,7 @@
 package com.ruangaldo.local
 
+import com.ruangaldo.domain.LoginEntity
+import com.ruangaldo.domain.RegisterEntity
 import com.ruangaldo.domain.UserInfoEntity
 
 /**
@@ -7,7 +9,7 @@ import com.ruangaldo.domain.UserInfoEntity
  * Github: https://github.com/reinaldoriant
  */
 
-fun com.ruangaldo.domain.LoginEntity?.toUserInfoEntity(): com.ruangaldo.domain.UserInfoEntity =
+fun LoginEntity?.toUserInfoEntity(): UserInfoEntity =
     this.let {
         com.ruangaldo.domain.UserInfoEntity(
             token = it?.token.orEmpty(),
@@ -20,7 +22,7 @@ fun com.ruangaldo.domain.LoginEntity?.toUserInfoEntity(): com.ruangaldo.domain.U
         )
     }
 
-fun com.ruangaldo.domain.RegisterEntity?.toUserInfoEntity(): com.ruangaldo.domain.UserInfoEntity =
+fun RegisterEntity?.toUserInfoEntity(): UserInfoEntity =
     this.let {
         com.ruangaldo.domain.UserInfoEntity(
             token = it?.token.orEmpty(),

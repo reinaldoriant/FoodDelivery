@@ -1,21 +1,18 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.com.android.application)
+    alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.ruangaldo.ui"
-    compileSdk = 33
+    namespace = "com.ruangaldo.remote"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ruangaldo.ui"
         minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -27,10 +24,6 @@ android {
             )
         }
     }
-    viewBinding {
-        this.enable = true
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -41,6 +34,7 @@ android {
 }
 
 dependencies {
+
     implementation(project(":shared"))
     implementation(project(":register:domain"))
     implementation(libs.core.ktx)
@@ -56,4 +50,3 @@ dependencies {
     implementation(libs.logging.interceptor)
     implementation(libs.converter.moshi)
 }
-
