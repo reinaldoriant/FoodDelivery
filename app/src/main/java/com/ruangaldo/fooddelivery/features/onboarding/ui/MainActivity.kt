@@ -8,11 +8,11 @@ import com.ruangaldo.fooddelivery.R
 import com.ruangaldo.fooddelivery.factories.onboarding.OnBoardingViewModelFactory
 import com.ruangaldo.fooddelivery.features.home.ui.HomeActivity
 import com.ruangaldo.fooddelivery.ui.login.LoginActivity
-import com.ruangaldo.fooddelivery.features.onboarding.presentation.OnBoardingViewModel
+import com.ruangaldo.presentation.OnBoardingViewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var _onBoardingVM: OnBoardingViewModel
+    private lateinit var _onBoardingVM: com.ruangaldo.presentation.OnBoardingViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         _onBoardingVM = ViewModelProvider(
             this,
             OnBoardingViewModelFactory.createFactory(this@MainActivity)
-        )[OnBoardingViewModel::class.java]
+        )[com.ruangaldo.presentation.OnBoardingViewModel::class.java]
     }
 
     private fun observeViewModel() {
