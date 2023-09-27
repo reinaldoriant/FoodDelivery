@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.distinctUntilChanged
 import androidx.lifecycle.viewModelScope
-import com.ruangaldo.fooddelivery.features.user.domain.IGetUserInfo
-import com.ruangaldo.fooddelivery.features.user.domain.UserInfoEntity
+import com.ruangaldo.domain.IGetUserInfo
+import com.ruangaldo.domain.UserInfoEntity
 import kotlinx.coroutines.launch
 
 /**
@@ -14,9 +14,9 @@ import kotlinx.coroutines.launch
  * Github: https://github.com/reinaldoriant
  */
 
-class OnBoardingViewModel constructor(private val preference: IGetUserInfo) : ViewModel() {
-    val userInfo: LiveData<UserInfoEntity> get() = _userInfo.distinctUntilChanged()
-    private val _userInfo = MutableLiveData<UserInfoEntity>()
+class OnBoardingViewModel constructor(private val preference: com.ruangaldo.domain.IGetUserInfo) : ViewModel() {
+    val userInfo: LiveData<com.ruangaldo.domain.UserInfoEntity> get() = _userInfo.distinctUntilChanged()
+    private val _userInfo = MutableLiveData<com.ruangaldo.domain.UserInfoEntity>()
 
     init {
         getUserInfo()

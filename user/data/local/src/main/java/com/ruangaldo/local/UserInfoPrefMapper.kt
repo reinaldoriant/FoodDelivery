@@ -1,16 +1,15 @@
-package com.ruangaldo.fooddelivery.features.user.data.local
+package com.ruangaldo.local
 
-import com.ruangaldo.domain.RegisterEntity
-import com.ruangaldo.fooddelivery.features.user.domain.UserInfoEntity
+import com.ruangaldo.domain.UserInfoEntity
 
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.
  * Github: https://github.com/reinaldoriant
  */
 
-fun com.ruangaldo.domain.LoginEntity?.toUserInfoEntity(): UserInfoEntity =
+fun com.ruangaldo.domain.LoginEntity?.toUserInfoEntity(): com.ruangaldo.domain.UserInfoEntity =
     this.let {
-        UserInfoEntity(
+        com.ruangaldo.domain.UserInfoEntity(
             token = it?.token.orEmpty(),
             name = it?.name.orEmpty(),
             address = it?.address.orEmpty(),
@@ -21,9 +20,9 @@ fun com.ruangaldo.domain.LoginEntity?.toUserInfoEntity(): UserInfoEntity =
         )
     }
 
-fun com.ruangaldo.domain.RegisterEntity?.toUserInfoEntity(): UserInfoEntity =
+fun com.ruangaldo.domain.RegisterEntity?.toUserInfoEntity(): com.ruangaldo.domain.UserInfoEntity =
     this.let {
-        UserInfoEntity(
+        com.ruangaldo.domain.UserInfoEntity(
             token = it?.token.orEmpty(),
             name = it?.name.orEmpty(),
             address = it?.address.orEmpty(),

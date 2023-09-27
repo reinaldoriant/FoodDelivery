@@ -1,9 +1,8 @@
-package com.ruangaldo.fooddelivery.features.user.data.local
+package com.ruangaldo.local
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.ruangaldo.fooddelivery.features.user.domain.UserInfoEntity
 import com.ruangaldo.fooddelivery.framework.DataStoreFactory.dataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -25,7 +24,7 @@ class UserInfoPrefRepository constructor(private val context: Context) :
         val cityPref = stringPreferencesKey("city")
     }
 
-    override suspend fun save(userInfo: UserInfoEntity) {
+    override suspend fun save(userInfo: com.ruangaldo.domain.UserInfoEntity) {
         userInfo.let {
             context.dataStore.edit { preference ->
                 preference[tokenPref] = it.token
@@ -38,7 +37,7 @@ class UserInfoPrefRepository constructor(private val context: Context) :
         }
     }
 
-    override fun get(): Flow<UserInfoEntity> =
+    override fun get(): Flow<com.ruangaldo.domain.UserInfoEntity> =
         context.dataStore.data.map { preferences ->
             val token = preferences[tokenPref].orEmpty()
             val name = preferences[namePref].orEmpty()
@@ -47,7 +46,7 @@ class UserInfoPrefRepository constructor(private val context: Context) :
             val phoneNumber = preferences[phoneNumberPref].orEmpty()
             val address = preferences[addressPref].orEmpty()
             val city = preferences[cityPref].orEmpty()
-            UserInfoEntity(
+            com.ruangaldo.domain.UserInfoEntity(
                 token = token,
                 name = name,
                 email = email,

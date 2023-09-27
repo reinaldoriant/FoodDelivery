@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.features.user.domain
+package com.ruangaldo.domain
 
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.

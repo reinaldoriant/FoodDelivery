@@ -1,7 +1,7 @@
 package com.ruangaldo.fooddelivery.factories.user
 
 import android.content.Context
-import com.ruangaldo.fooddelivery.features.user.data.local.UserInfoPrefRepository
+import com.ruangaldo.local.UserInfoPrefRepository
 
 /**
  * Written with joy and smile by Ruang Aldo on 24/09/23.
