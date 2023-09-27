@@ -48,6 +48,8 @@ dependencies {
     implementation(project(":register:data:remote"))
     implementation(project(":register:domain"))
     implementation(project(":register:presentation"))
+    implementation(project(":user:data:local"))
+    implementation(project(":user:domain"))
     implementation(project(":shared"))
 
     implementation(libs.core.ktx)
@@ -58,7 +60,7 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    implementation(libs.datastore)
+
     implementation(libs.lifecycle.runtime)
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
