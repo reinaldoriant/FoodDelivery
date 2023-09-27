@@ -50,6 +50,7 @@ dependencies {
     implementation(project(":register:presentation"))
     implementation(project(":user:data:local"))
     implementation(project(":user:domain"))
+    implementation(project(":onboarding:presentation"))
     implementation(project(":shared"))
 
     implementation(libs.core.ktx)
