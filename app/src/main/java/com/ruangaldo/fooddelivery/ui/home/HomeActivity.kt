@@ -1,4 +1,4 @@
-package com.ruangaldo.fooddelivery.features.home.ui
+package com.ruangaldo.fooddelivery.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

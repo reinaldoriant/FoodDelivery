@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.ruangaldo.domain.LoginRequestEntity
 import com.ruangaldo.fooddelivery.databinding.ActivityLoginBinding
 import com.ruangaldo.fooddelivery.factories.login.LoginViewModelFactory
-import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
+import com.ruangaldo.fooddelivery.ui.onboarding.MainActivity
 import com.ruangaldo.fooddelivery.ui.register.RegisterUserInfoActivity
 import com.ruangaldo.presentation.LoginViewModel
 import com.ruangaldo.shared.domain.ViewResource

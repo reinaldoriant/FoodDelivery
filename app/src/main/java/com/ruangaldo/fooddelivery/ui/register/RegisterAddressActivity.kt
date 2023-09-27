@@ -7,9 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.ruangaldo.fooddelivery.R
 import com.ruangaldo.fooddelivery.databinding.ActivityRegisterAddressBinding
 import com.ruangaldo.fooddelivery.factories.register.RegisterViewModelFactory
-import com.ruangaldo.fooddelivery.features.onboarding.ui.MainActivity
-import com.ruangaldo.domain.RegisterRequestEntity
-import com.ruangaldo.presentation.RegisterViewModel
+import com.ruangaldo.fooddelivery.ui.onboarding.MainActivity
 import com.ruangaldo.shared.domain.ViewResource
 import com.ruangaldo.shared.ui.navigation.clickBackPressed
 import com.ruangaldo.shared.ui.showSnackbar
