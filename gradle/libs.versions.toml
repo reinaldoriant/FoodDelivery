@@ -9,7 +9,7 @@ appcompat = "1.6.1"
 material = "1.9.0"
 constraintlayout = "2.1.4"
 lifecycle = "2.6.2"
-mockk = "1.13.8"
+mockk = "1.13.7"
 
 # Http
 retrofit = "2.9.0"
