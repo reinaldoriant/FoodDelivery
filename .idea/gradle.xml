@@ -12,9 +12,23 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/home" />
             <option value="$PROJECT_DIR$/login" />
+            <option value="$PROJECT_DIR$/login/data" />
+            <option value="$PROJECT_DIR$/login/data/remote" />
+            <option value="$PROJECT_DIR$/login/domain" />
+            <option value="$PROJECT_DIR$/login/presentation" />
+            <option value="$PROJECT_DIR$/onboarding" />
+            <option value="$PROJECT_DIR$/onboarding/presentation" />
+            <option value="$PROJECT_DIR$/register" />
+            <option value="$PROJECT_DIR$/register/data" />
+            <option value="$PROJECT_DIR$/register/data/remote" />
+            <option value="$PROJECT_DIR$/register/domain" />
+            <option value="$PROJECT_DIR$/register/presentation" />
             <option value="$PROJECT_DIR$/shared" />
+            <option value="$PROJECT_DIR$/user" />
+            <option value="$PROJECT_DIR$/user/data" />
+            <option value="$PROJECT_DIR$/user/data/local" />
+            <option value="$PROJECT_DIR$/user/domain" />
           </set>
         </option>
       </GradleProjectSettings>
