@@ -1,8 +1,8 @@
 package com.ruangaldo.remote.repository
 
-import com.ruangaldo.shared.data.DataResource
 import com.ruangaldo.remote.model.LoginRemoteRequest
 import com.ruangaldo.remote.model.LoginRemoteResponse
+import com.ruangaldo.shared.data.DataResource
 import kotlinx.coroutines.flow.Flow
 
 /**
