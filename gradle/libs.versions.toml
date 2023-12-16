@@ -10,6 +10,7 @@ material = "1.9.0"
 constraintlayout = "2.1.4"
 lifecycle = "2.6.2"
 mockk = "1.13.7"
+turbine = "1.0.0"
 
 # Http
 retrofit = "2.9.0"
@@ -47,6 +48,7 @@ datastore = { module = "androidx.datastore:datastore-preferences", version.ref =
 
 # Unit Test
 mockk = { module = "io.mockk:mockk", version.ref = "mockk"}
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine"}
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
