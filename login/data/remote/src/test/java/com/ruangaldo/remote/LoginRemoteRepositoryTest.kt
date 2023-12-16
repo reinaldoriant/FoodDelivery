@@ -58,7 +58,7 @@ class LoginRemoteRepositoryTest {
     }
 
     @Test
-    fun testGetSuccessOn200HttpResponseWithResponse() {
+    fun testLoginRemoteRepositoryOn200HttpResponse() {
         expect(
             repository = repository,
             receivedResult = loginRemoteResponseDummy,
