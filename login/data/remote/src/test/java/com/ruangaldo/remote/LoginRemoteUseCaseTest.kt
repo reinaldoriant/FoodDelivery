@@ -1,7 +1,8 @@
-package com.ruangaldo.remote.repository
+package com.ruangaldo.remote
 
 import app.cash.turbine.test
 import com.ruangaldo.remote.model.LoginRemoteResponse
+import com.ruangaldo.remote.repository.ILoginRemoteRepository
 import com.ruangaldo.remote.usecase.LoginRemoteUseCase
 import com.ruangaldo.shared.data.AuthorizedException
 import com.ruangaldo.shared.data.ConnectivityException

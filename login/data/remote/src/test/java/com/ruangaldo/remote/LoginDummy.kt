@@ -1,4 +1,4 @@
-package com.ruangaldo.remote.repository
+package com.ruangaldo.remote
 
 import com.ruangaldo.domain.LoginEntity
 import com.ruangaldo.domain.LoginRequestEntity
